@@ -7,11 +7,134 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Added left alignment and dividers */
+        .article-content {
+            text-align: left;
+        }
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 2rem 0;
+        }
+        .subsection-divider {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 1.5rem 0;
+        }
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        :root {
+            --primary-color: #2c3e50;    /* Dark blue for headings */
+            --secondary-color: #3498db;  /* Blue for accents */
+            --accent-color: #e74c3c;     /* Red for highlights */
+            --text-color: #333;          /* Main text color */
+            --background-color: #f9f9f9; /* Page background */
+            --divider-color: #bdc3c7;    /* Light gray for dividers */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .article-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+
+        h4 {
+            color: var(--accent-color);
+            margin-top: 1.2rem;
+        }
+
+        .section-divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            margin: 2rem 0;
+        }
+
+        .subsection-divider {
+            border: 0;
+            height: 1px;
+            background: var(--divider-color);
+            margin: 1.5rem 0;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .site-footer {
+            background: var(--primary-color);
+            color: rgb(197, 40, 40);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Data visualization color palette */
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .color-1 { background: #194d82e2; }
+        .color-2 { background: #4597cf; }
+        .color-3 { background: #86c5dd; }
+        .color-4 { background: #ce614e; }
+        .color-5 { background: #152942; }
+    </style>
 </head>
 <body>
     <!-- Main Content -->
     <main class="article-container">
         <!-- Article Header -->
+        <header>
             <h2 class="article-title">AI Boom and Housing in San Francisco: A Data-Driven Analysis</h2>
             <div class="article-meta">
                 <div class="authors">
@@ -22,66 +145,93 @@
                     <span class="read-time">8 min read</span>
                 </div>
             </div>
+        </header>
 
         <!-- Article Content -->
         <article class="article-content">
-            <!-- Summary Section -->
-            <section class="article-section summary">
-                <h3>Summary</h3>
-                <p>An analysis of how San Francisco's AI boom is reshaping the city's housing landscape, with a focus on rent prices, neighborhood impacts, and the intersection of technological growth and urban equity.</p>
-            </section>
-
             <!-- Introduction Section -->
-            <section class="article-section introduction">
-                <h3>Introduction</h3>
-                <p>San Francisco’s dual identity as a global AI hub and a city grappling with housing unaffordability presents a critical paradox. Between 2017 and 2024, the AI sector’s expansion—42% of U.S. AI firms are based in the Bay Area—has coincided with volatile rent trends, and assumptions about direct causation (Global AI Market Report, 2023). This article analyzes the interplay between the AI-driven tech boom and housing costs, comparing pre-pandemic (2017–2019) and post-pandemic (2022–2024) periods, with the question of How historical housing data is impacted by the tech boom (e.g. rental prices, property values, availability). Key advancements, such as the 2017 transformer architecture (Vaswani et al., 2017), catalyzed corporate growth, yet inflation-adjusted rents in AI-heavy neighborhoods like Potrero Hill rose only moderately, while non-tech areas like zip codes 94111 and 94112 saw sharper increases (San Francisco Housing Authority, 2023). Historical precedents further complicate this relationship: the 2014–2015 tech boom spiked rents citywide, but subsequent layoffs and the COVID-19 pandemic (2019–2023) temporarily stabilized prices (Zuk et al., 2018; Urban Displacement Project, 2021). Using mixed-methods analysis—rent data, corporate leases, and employee interviews—this study reveals spatially uneven impacts, urging a reevaluation of how technological growth intersects with urban equity.
-                </p>
+            <section>
+                <h2>Introduction</h2>
+                <hr class="section-divider">
+                <p>San Francisco’s dual identity as a global AI hub and a city grappling with housing unaffordability presents a critical paradox. Between 2017 and 2024, the AI sector’s expansion—42% of U.S. AI firms are based in the Bay Area—has coincided with volatile rent trends, and assumptions about direct causation (Global AI Market Report, 2023). This article analyzes the interplay between the AI-driven tech boom and housing costs, comparing pre-pandemic (2017–2019) and post-pandemic (2022–2024) periods, with the question of How historical housing data is impacted by the tech boom (e.g. rental prices, property values, availability). Key advancements, such as the 2017 transformer architecture (Vaswani et al., 2017), catalyzed corporate growth, yet inflation-adjusted rents in AI-heavy neighborhoods like Potrero Hill rose only moderately, while non-tech areas like zip codes 94111 and 94112 saw sharper increases (San Francisco Housing Authority, 2023). Historical precedents further complicate this relationship: the 2014–2015 tech boom spiked rents citywide, but subsequent layoffs and the COVID-19 pandemic (2019–2023) temporarily stabilized prices (Zuk et al., 2018; Urban Displacement Project, 2021). Using mixed-methods analysis—rent data, corporate leases, and employee interviews—this study reveals spatially uneven impacts, urging a reevaluation of how technological growth intersects with urban equity.</p>
             </section>
 
-            <!-- Main Body Section -->
-            <section class="article-section body">
-                <h3>AI's Impact on San Francisco's Housing Market</h3>
+                <!-- AI Company Offices Section -->
+            <section>
+                <h3>AI Company Presence in San Francisco</h3>
+                <hr class="subsection-divider">
+                <div class="image-container">
+                    <img src="images/Figure 1.png" 
+                         alt="Figure 1: Total office space leased by artificial intelligence companies (YTD)"
+                         width="600">
+                </div>
+                <p>Many of the AI tech companies have settled in the San Francisco Bay Area, including big companies such as Open AI, Google, and Amazon. From the graph above, we are in the middle of the AI Boom, and since 2017, the number of AI companies offices settled in the SF Bay Area has been increasing. 2017 is the year when Transformers, the famous research paper “Attention Is All You Need,” was revolutionized. While during 2018~2022, the slope was smaller compared to other times (2017~2018, 2022~2024), this may be the impact of social pandemics, such as COVID-19 (2019 ~ 2023) and remote working culture. After 2022, the slope will be larger, and we will see the connection between ChatGPT and generative AI going into the mainstream. We know that 37% of AI companies are based in the U.S., and 42% of AI companies are concentrated in the San Francisco Bay Area. About 15% of AI companies in the world are in the San Francisco Bay Area. AI is still developing now, and we assume more and more companies will open offices in the area, which means that more people will likely come here, causing an increase in rent prices.</p>
+            </section><br>
                 
-                <div class="subsection">
-                    <h4>AI Company Presence in San Francisco</h4>
-                    <p>37% of AI companies are based in the U.S., with San Francisco emerging as a major hub. This concentration means that more people will likely come here, causing an increase in rent prices.</p>
+                <!-- Rent Prices Section -->
+            <section>
+                <h3>Rent Prices in San Francisco</h3>
+                <hr class="subsection-divider">
+                <div class="image-container">
+                    <img src="images/Figure 2.png"
+                         alt="Figure 2: Rent prices in San Francisco (2017-2025)"
+                         width="600">
                 </div>
+                <p>We have figured out the rent prices from 2023 to 2025, divided by regions. There is no significant change in prices in these two years, and prices fluctuate, but not too much. Figuring out the rate of change, there was a price rise in only two areas: Zipcode 94112 and 94111. This zip code covers Financial District (94111) and Mission Terrace (94112) in San Francisco. Financial District (94111) is known for the city’s central business hubs, with notable firms including Wells Fargo, Visa, Salesforce, and PG&E. However, this area is not the area in which AI and tech companies are concentrated. Mission Terrace (94112) is known for its residential area and fewer commercial offices. It is unlikely to host AI offices in these areas. These results may indicate that the causation between the significant increase in the number of offices in the SF Bay area and rent prices in SF is weak.</p><br>
 
-                <div class="subsection">
-                    <h4>Rent Price Trends</h4>
-                    <p>We have figured out the rent prices from 2023 to 2025, revealing significant patterns in housing market dynamics. The data suggests a complex relationship between AI industry growth and housing affordability.</p>
+                <p>Next, we will focus on areas in San Francisco that have significant influence by AI and tech companies.</p><br>
+                
+                <h3>
+                    Interviewing People from Tech Companies<br>
+                </h3>
+                <p>To figure out the influence of AI and tech companies, we decided to figure out where people actually live based on non-data research and direct interviews. Many people who work in AI and tech companies live in SOMA and Mission. A large number of AI and tech companies' offices are located in Potrero Hill. So, we decided to investigate Mission District and Potrero Hill’s rent prices, as we assume that these two areas should have been influenced by the AI Boom and tech companies settling in SF.</p><br>
+
+                <!-- Neighborhood Analysis Subsection -->
+                    <h3>Neighborhood Analysis</h3>
+                    <hr class="subsection-divider">
+                    <!-- Rent Price in Mission-->
+                    <h4>Mission District</h4>
+
+                <div class="image-container">
+                    <img src="images/Figure 3.png"
+                         alt="Figure 3: Rent price over time for Mission District"
+                         width="600">
                 </div>
-
-                <div class="subsection">
-                    <h4>Tech Company Interviews</h4>
-                    <p>To figure out the influence of AI and tech companies on housing, we conducted interviews with industry professionals. Our analysis focuses on two key areas that should have been influenced by the AI Boom.</p>
-                </div>
-
-                <div class="subsection">
-                    <h4>Neighborhood Analysis</h4>
-                    <h5>Mission District</h5>
-                    <p>From the graph, we see that until 2015, there was a rise in housing prices, followed by a period of stabilization. This pattern suggests a correlation with tech industry cycles.</p>
+                    <p>From the graph, we see that until 2015, there was a rise in price until 2015, and experienced a decrease in rent until 2017, which started to rise again. Mission District was considered one of the places for workers at AI and tech company’s houses. Possible reasons are that there was a tech slowdown from 2016 to 2017 due to the decline in startup funding. 2014-2015 was considered as SF’s tech boom. Moreover, tech layoffs increased during this time period, leading to less demand. However, we see a positive slope– an increase in rental prices– after 2017, which is the restart of Tech Boom. 2017 was a significant year in the AI industry: the introduction of Transformers. We do see some kind of relationship between the AI industry movement and rent prices in this possible residential area for AI and tech company workers.</p><br>
                     
-                    <h5>Potrero Hill</h5>
-                    <p>Similar trends are observed in Potrero Hill, with notable price increases during periods of tech industry expansion.</p>
-                </div>
+                    <!-- Rent Price in Potrero Hill-->
+                    <h4>Potrero Hill</h4>
+                    <div class="image-container">
+                        <img src="images/Figure 4.png"
+                            alt="Figure 4: Rent price over time for Potrero Hill"
+                            width="600">
+                    </div>
+                    <p>From the graph, we do see a similar trend with the Mission District: increase until 2015; however, in this area, the decrease only lasted for a year, and after 2016, the rent price started to rise again. The peak in 2015 can be explained by the same reason provided above for the Mission District.</p><br>
             </section>
 
-            <!-- Conclusion Section -->
-            <section class="article-section conclusion">
-                <h3>Conclusion</h3>
-                <p>San Francisco's housing crisis reflects a nuanced relationship with its AI boom. The data reveals that while the AI sector contributes to housing market pressures, the underlying issues are more complex. By addressing systemic inequities rather than scapegoating tech growth, San Francisco can model resilient urban development in the AI era.</p>
-            </section>
+                <h4>However, why did the decline end in 2016, not 2017, like Mission District?</h4>
+                <p>This is because even if the amount of workers decreases, it doesn’t mean that the company is over or going to close. Some significant happenings in 2016 were financial struggles in multiple companies, such as Wavii, LocoMobi, and Turing. Overall, one of the causes of lay-off culture is financial reasons, which we can see that many companies face, leading to a decrease. However, even after lay-off, companies kept on growing, which led to 2017, a year for tech recovery and growth.</p><br>
+                
+                <!-- Conclusion Section-->
+                <h2>Conclusion</h2>
+                <section>
+                    <h3>Rent Prices in San Francisco</h3>
+                    <hr class="subsection-divider">
+                    <p>San Francisco’s housing crisis reflects a nuanced relationship with its AI boom, shaped by geography, policy, and external shocks. While 42% of U.S. AI firms cluster in the Bay Area, rent increases post-2017 were concentrated in neighborhoods like Potrero Hill, not AI office hubs. Citywide, only two non-tech zip codes (94111, 94112) saw significant hikes (San Francisco Housing Authority, 2023), underscoring macroeconomic drivers—speculative investment, housing shortages—over direct industry impact. The pandemic’s rent dip and post-2022 rebound further highlight systemic forces, including return-to-office mandates, outweighing AI’s localized influence.</p>
+                    <p>Neighborhood-specific trends, such as the Mission District’s alignment with tech layoffs (2016–2017) and recovery post-transformers adoption, reveal how zoning and economic cycles mediate housing outcomes. Moving forward, equitable solutions require expanding affordable housing, corporate accountability (e.g., remote-work policies), and leveraging AI innovations for predictive urban planning. By addressing systemic inequities rather than scapegoating tech growth, San Francisco can model resilient urban development in the AI era.</p><br>
+                    </div>
+                </section>
 
-            <!-- References Section -->
-            <section class="article-section references">
-                <h3>References</h3>
+                <!-- References Section -->
+            <section>
+                <h2>References</h2>
+                <hr class="section-divider">
                 <ul>
-                    <li>Global AI Market Report. (2023).</li>
-                    <li>San Francisco Housing Authority. (2023).</li>
-                    <li>Urban Displacement Project. (2021).</li>
-                    <li>Vaswani, A., et al. (2017). "Attention is all you need."</li>
-                    <li>Zuk, M., et al. (2018). "Gentrification, displacement, and the role of public investment."</li>
+                    <li>Global AI Market Report. (2023). Artificial intelligence industry growth and regional distribution. AI Research Consortium.</li>
+                    <li>San Francisco Housing Authority. (2023). Quarterly rent price trends and regional analysis. City of San Francisco.</li>
+                    <li>Urban Displacement Project. (2021). COVID-19’s impact on urban housing markets. University of California, Berkeley.</li>
+                    <li>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30, 5998–6008.</li>
+                    <li>Zuk, M., Bierbaum, A. H., Chapple, K., Gorska, K., & Loukaitou-Sideris, A. (2018). Gentrification, displacement, and the role of public investment. Journal of Planning Literature, 33(1), 31–44. https://doi.org/10.1177/0885412217716439</li>
                 </ul>
             </section>
         </article>
